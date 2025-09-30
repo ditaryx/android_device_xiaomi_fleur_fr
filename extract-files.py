@@ -54,6 +54,9 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc': blob_fixup()
         .regex_replace('mediatek', 'mediatek-64b'),
 
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+        .add_needed('libutils-v32.so'),
+
     'vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc': blob_fixup()
         .regex_replace('start', 'enable'),
 
