@@ -1228,6 +1228,10 @@ vendor/lib64/libwpfa.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 
+# Radio (IMS) from fleur-user 13 TP1A.220624.014 V816.0.10.0.TKEINXM release-keys
+vendor/bin/volte_imcb|a8c3314ce64bde4ab66f8628ff4db225317918ff
+vendor/bin/volte_imsm_93|af0e879f10c6e54a736069242acc41a7f9a5a3e6
+
 # Radio Configs
 vendor/etc/apdb/APDB_MT6785_S01__W2248
 vendor/etc/apdb/APDB_MT6785_S01__W2248_ENUM
@@ -1253,8 +1257,6 @@ vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/bin/hw/vtservice_hidl
 vendor/bin/rcs_volte_stack
 vendor/bin/volte_clientapi_ua
-vendor/bin/volte_imcb
-vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_rcs_ua
 vendor/bin/volte_stack
