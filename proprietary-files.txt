@@ -1283,9 +1283,9 @@ vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
-# Sensors
+# Sensors - from fleur-user 13 SP1A.210812.016 V816.0.9.0.TKEMIXM release-keys
 vendor/etc/elliptic_sensor.xml
-vendor/lib64/hw/sensors.elliptic@2.0.so
+vendor/lib64/hw/sensors.elliptic.so:vendor/lib64/hw/sensors.elliptic@2.0.so
 vendor/lib64/hw/sensors.mt6781.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
