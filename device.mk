@@ -337,7 +337,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/libmtkperf_client \
     hardware/xiaomi \
     hardware/google/pixel \
-    hardware/google/interfaces
+    hardware/google/interfaces \
+    hardware/mediatek/libaedv
 
 # USB
 PRODUCT_PACKAGES += \
