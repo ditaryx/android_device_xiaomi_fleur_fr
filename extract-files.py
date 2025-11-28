@@ -24,6 +24,7 @@ namespace_imports = [
 	'device/xiaomi/fleur',
 	'hardware/mediatek',
 	'hardware/mediatek/libmtkperf_client',
+	'hardware/mediatek/libaedv',
 	'hardware/xiaomi',
 ]
 

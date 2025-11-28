@@ -320,6 +320,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
+# UFFD GC
+PRODUCT_ENABLE_UFFD_GC := true
+
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service.fleur
@@ -334,7 +337,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/libmtkperf_client \
     hardware/xiaomi \
     hardware/google/pixel \
-    hardware/google/interfaces
+    hardware/google/interfaces \
+    hardware/mediatek/libaedv
 
 # USB
 PRODUCT_PACKAGES += \
