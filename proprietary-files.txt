@@ -32,14 +32,7 @@ vendor/lib/librt_extamp_intf.so
 vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
-vendor/lib/libaudioprocessing_mtk.so
-vendor/lib/libmisound.so
-vendor/lib/libmisoundcrossfade.so
-vendor/lib/libmisoundfx.so
-vendor/lib64/libaudioprocessing_mtk.so
-vendor/lib64/libmisound.so
-vendor/lib64/libmisoundcrossfade.so
-vendor/lib64/libmisoundfx.so
+
 # Audio (Configs)
 vendor/etc/audio_param/AudioParamOptions.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
