@@ -97,181 +97,22 @@
       "ResetOnInit": true
     },
     {
-      "Name": "CPULittleClusterDownRateLimitUs",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us",
-      "Values": [
-        "20000",
-        "5000",
-        "2000",
-        "500"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUBigClusterDownRateLimitUs",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us",
-      "Values": [
-        "20000",
-        "5000",
-        "2000",
-        "500"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPULittleClusterUpRateLimitUs",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us",
-      "Values": [
-        "20000",
-        "5000",
-        "2000",
-        "500"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUBigClusterUpRateLimitUs",
-      "Path": "/sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us",
-      "Values": [
-        "20000",
-        "5000",
-        "2000",
-        "500"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "RestrictedCpuset",
-      "Path": "/dev/cpuset/restricted/cpus",
-      "Values": [
-        "0-3",
-        "0-7"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "UclampFGMin",
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
-        "15"
+        "15",
+        "30"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
-      "Name": "GPUMinFreq",
-      "Path": "/sys/kernel/gpu/gpu_min_clock",
+      "Name": "UclampTAMin",
+      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
-        "950000",
-        "940000",
-        "930000",
-        "920000",
-        "910000",
-        "900000",
-        "890000",
-        "880000",
-        "870000",
-        "860000",
-        "850000",
-        "840000",
-        "830000",
-        "820000",
-        "810000",
-        "800000",
-        "790000",
-        "775000",
-        "761000",
-        "746000",
-        "732000",
-        "718000",
-        "703000",
-        "689000",
-        "675000",
-        "660000",
-        "646000",
-        "631000",
-        "617000",
-        "603000",
-        "588000",
-        "574000",
-        "560000",
-        "543000",
-        "527000",
-        "511000",
-        "495000",
-        "478000",
-        "462000",
-        "446000",
-        "430000",
-        "413000",
-        "397000",
-        "381000",
-        "365000",
-        "348000",
-        "332000",
-        "316000",
-        "300000"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "GPUMaxFreq",
-      "Path": "/sys/kernel/gpu/gpu_max_clock",
-      "Values": [
-        "950000",
-        "940000",
-        "930000",
-        "920000",
-        "910000",
-        "900000",
-        "890000",
-        "880000",
-        "870000",
-        "860000",
-        "850000",
-        "840000",
-        "830000",
-        "820000",
-        "810000",
-        "800000",
-        "790000",
-        "775000",
-        "761000",
-        "746000",
-        "732000",
-        "718000",
-        "703000",
-        "689000",
-        "675000",
-        "660000",
-        "646000",
-        "631000",
-        "617000",
-        "603000",
-        "588000",
-        "574000",
-        "560000",
-        "543000",
-        "527000",
-        "511000",
-        "495000",
-        "478000",
-        "462000",
-        "446000",
-        "430000",
-        "413000",
-        "397000",
-        "381000",
-        "365000",
-        "348000",
-        "332000",
-        "316000",
-        "300000"
+        "0",
+        "40"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -329,31 +170,7 @@
       "ResetOnInit": true
     },
     {
-      "Name": "PowerHALMainState",
-      "Path": "vendor.powerhal.state",
-      "Values": [
-        "SUSTAINED_PERFORMANCE",
-        ""
-      ],
-      "Type": "Property"
-    },
-    {
-      "Name": "PowerHALAudioState",
-      "Path": "vendor.powerhal.audio",
-      "Values": [
-        "AUDIO_STREAMING_LOW_LATENCY",
-        ""
-      ],
-      "Type": "Property"
-    },
-    {
-      "Name": "PowerHALRenderingState",
-      "Path": "vendor.powerhal.rendering",
-      "Values": ["EXPENSIVE_RENDERING", ""],
-      "Type": "Property"
-    },
-    {
-      "Name": "DoubleTapToWakeEnable",
+      "Name": "DoubleTapToWake",
       "Path": "/sys/touchpanel/double_tap",
       "Values": [
         "1",
@@ -364,45 +181,39 @@
   "Actions": [
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "PowerHALMainState",
-      "Duration": 0,
-      "Value": "SUSTAINED_PERFORMANCE"
-    },
-    {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
       "Value": "2050000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "950000"
-    },
-    {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-      "Node": "PowerHALAudioState",
-      "Duration": 0,
-      "Value": "AUDIO_STREAMING_LOW_LATENCY"
-    },
-    {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "875000"
-    },
-    {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "1002000"
-    },
-    {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPULittleClusterMaxFreq",
       "Duration": 0,
       "Value": "2000000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "2050000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "2000000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 1250,
+      "Value": "1866000"
+    },
+    {
+      "PowerHint": "DISPLAY_CHANGE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 1250,
+      "Value": "1860000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -418,15 +229,15 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CCIFreqMode",
-      "Duration": 58,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "UclampFGMin",
       "Duration": 58,
       "Value": "15"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "UclampTAMin",
+      "Duration": 58,
+      "Value": "40"
     },
     {
       "PowerHint": "LAUNCH",
@@ -447,60 +258,6 @@
       "Value": "1"
     },
     {
-      "PowerHint": "GAME",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "CPULittleClusterDownRateLimitUs",
-      "Duration": 0,
-      "Value": "20000"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "CPUBigClusterDownRateLimitUs",
-      "Duration": 0,
-      "Value": "20000"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "CPULittleClusterUpRateLimitUs",
-      "Duration": 0,
-      "Value": "500"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "CPUBigClusterUpRateLimitUs",
-      "Duration": 0,
-      "Value": "500"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "GPUSchedMode",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "GPUSchedPeriod",
-      "Duration": 0,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "950000"
-    },
-    {
       "PowerHint": "GAME_LOADING",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
@@ -511,16 +268,10 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
       "Value": "9999999"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-3"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
-      "Node": "DoubleTapToWakeEnable",
+      "Node": "DoubleTapToWake",
       "Duration": 0,
       "Value": "1"
     }

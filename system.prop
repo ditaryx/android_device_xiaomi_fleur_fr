@@ -1,8 +1,3 @@
-# Logging
-log.tag=I
-
-# RIL
-ro.product.mod_device=fleur_global
-
-# SurfaceFlinger
-ro.sf.blurs_are_expensive=1
+# WiFi
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=120
